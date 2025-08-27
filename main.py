@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template, jsonify, url_for, session, redirect
 import sqlite3
-
 app = Flask(__name__)
 
 def connect_sqlite():
