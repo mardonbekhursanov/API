@@ -1,7 +1,8 @@
 from flask import Flask, request, render_template, jsonify, url_for, session, redirect
 import sqlite3
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 def connect_sqlite():
     conn = sqlite3.connect('users.db')
     conn.row_factory = sqlite3.Row
